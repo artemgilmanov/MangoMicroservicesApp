@@ -79,7 +79,7 @@ namespace Mango.Services.CouponAPI.Controllers
         }
 
         [HttpPost]
-        public ResponseDto Post([FromBody] CouponDto couponDto)
+        public ResponseDto AddCoupon([FromBody] CouponDto couponDto)
         {
             try
             {
@@ -99,7 +99,7 @@ namespace Mango.Services.CouponAPI.Controllers
         }
 
         [HttpPut]
-        public ResponseDto Put([FromBody] CouponDto couponDto)
+        public ResponseDto UpdateCoupon([FromBody] CouponDto couponDto)
         {
             try
             {
