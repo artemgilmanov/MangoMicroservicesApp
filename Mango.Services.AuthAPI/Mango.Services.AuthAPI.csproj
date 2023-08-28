@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Mango.Services.CouponAPI\Mango.Services.CouponAPI.csproj" />
   </ItemGroup>
 
 </Project>
