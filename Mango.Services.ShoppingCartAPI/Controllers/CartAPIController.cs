@@ -46,7 +46,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
             catch (Exception ex)
             {
                 _response.IsSuccess= false;
-                _response.Message= ex.Message;
+                _response.Message= ex.ToString();
             }
 
             return _response;
