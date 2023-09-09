@@ -1,7 +1,6 @@
 ﻿using Mango.Services.ShoppingCartAPI.Models.Dto;
 using Mango.Services.ShoppingCartAPI.Service.IService;
 using Newtonsoft.Json;
-using System.Net.Http;
 
 namespace Mango.Services.ShoppingCartAPI.Service
 {

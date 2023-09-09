@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Mango.Services.ShoppingCartAPI.Models;
 using Mango.Services.ShoppingCartAPI.Models.Dto;
-using Mango.Services.ShoppingCartAPI.Models;
 
 namespace Mango.Services.ShoppingCartAPI
 {
