@@ -104,6 +104,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
                     CartHeader cartHeader = _mapper.Map<CartHeader>(cartDto.CartHeader);
                     _db.CartHeaders.Add(cartHeader);
                     await _db.SaveChangesAsync();
+
                     cartDto.CartDetails.First().CartHeaderId = cartHeader.CartHeaderId;
                     _db.CartDetail.Add(_mapper.Map<CartDetails>(cartDto.CartDetails.First()));
                     await _db.SaveChangesAsync();

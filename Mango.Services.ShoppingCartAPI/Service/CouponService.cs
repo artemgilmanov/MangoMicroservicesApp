@@ -1,7 +1,6 @@
 ﻿using Mango.Services.ShoppingCartAPI.Models.Dto;
 using Mango.Services.ShoppingCartAPI.Service.IService;
 using Newtonsoft.Json;
-using System.Net.Http;
 
 namespace Mango.Services.ShoppingCartAPI.Service
 {
@@ -21,6 +20,7 @@ namespace Mango.Services.ShoppingCartAPI.Service
 
             var apiContent = await response.Content.ReadAsStringAsync();
             var resp = JsonConvert.DeserializeObject<ResponseDto>(apiContent);
+
             if (resp.IsSuccess)
             {
                 return JsonConvert.DeserializeObject<CouponDto>(Convert.ToString(resp.Result));
