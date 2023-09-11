@@ -4,9 +4,7 @@ using Mango.Services.CouponAPI.Data;
 using Mango.Services.CouponAPI.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(option =>
 {
-    option.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection"));
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
@@ -71,7 +68,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 ApplyMigration();
-
 app.Run();
 
 void ApplyMigration()

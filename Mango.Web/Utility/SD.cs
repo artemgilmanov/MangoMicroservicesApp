@@ -1,6 +1,6 @@
 ﻿namespace Mango.Web.Utility
 {
-    public class SD
+    public class SD // start details
     {
         public static string CouponAPIBase { get; set; }
         public static string ProductAPIBase { get; set; }

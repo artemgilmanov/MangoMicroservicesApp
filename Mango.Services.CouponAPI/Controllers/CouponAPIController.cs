@@ -103,7 +103,6 @@ namespace Mango.Services.CouponAPI.Controllers
 
         [HttpPut]
         [Authorize(Roles = "ADMIN")]
-
         public ResponseDto UpdateCoupon([FromBody] CouponDto couponDto)
         {
             try
